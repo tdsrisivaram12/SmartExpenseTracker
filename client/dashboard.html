@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<nav>
+  Dashboard
+  <div>
+    <button class="nav-btn secondary" onclick="showSavings()">Yearly Savings</button>
+    <button class="nav-btn logout" onclick="logout()">Logout</button>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="card">
+    <h3>Monthly Income</h3>
+    <input id="incomeInput" type="number" min="1" placeholder="Example: 30000">
+    <button class="secondary nav-btn" onclick="saveIncome()">Save Income</button>
+    <p id="incomeInfo"></p>
+  </div>
+
+  <div class="card">
+    <select id="monthSelect" onchange="loadDashboard()"></select>
+    <select id="yearSelect" onchange="loadDashboard()"></select>
+  </div>
+
+  <div class="card">
+    <h3>Monthly Expense: ₹ <span id="monthTotal">0</span></h3>
+    <h3>Monthly Savings: ₹ <span id="monthSavings">0</span></h3>
+  </div>
+
+  <div class="card">
+    <h3>Expense Intelligence Score</h3>
+    <h2><span id="score">--</span>/100</h2>
+    <p id="scoreText"></p>
+  </div>
+
+  <div class="card" id="savingsCard" style="display:none;">
+    <h3>Yearly Savings / Loss</h3>
+    <ul id="savingsList"></ul>
+    <strong>Net Yearly Savings: ₹ <span id="totalSavings">0</span></strong>
+  </div>
+
+  <div class="card"><canvas id="expenseChart"></canvas></div>
+  <div class="card"><div id="calendar"></div></div>
+  <div class="card"><ul id="dayExpenses"></ul></div>
+
+  <button onclick="location.href='add-expense.html'">Add Expense</button>
+</div>
+
+<script src="script.js"></script>
+<script>
+  if (!localStorage.getItem("userId")) location.href = "login.html";
+  loadDashboard();
+</script>
+</body>
+</html>

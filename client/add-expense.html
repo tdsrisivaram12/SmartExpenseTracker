@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Expense</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  Add Expense
+  <button class="nav-btn secondary" onclick="location.href='dashboard.html'">Back</button>
+</nav>
+
+<div class="container">
+  <div class="card">
+    <input id="title" placeholder="Expense title">
+    <input id="amount" type="number" min="1" placeholder="Amount">
+    <select id="category">
+      <option>Food</option>
+      <option>Travel</option>
+      <option>Shopping</option>
+      <option>Education</option>
+      <option>Others</option>
+    </select>
+    <input id="expenseDate" type="date">
+    <button onclick="addExpense()">Save Expense</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+  expenseDate.valueAsDate = new Date();
+</script>
+</body>
+</html>
