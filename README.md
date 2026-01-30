@@ -1,12 +1,12 @@
-# FinSight – Smart Expense & Savings Tracker with Real-Time Financial Intelligence
+# CampusFlow – Smart Expense & Savings Tracker with Real-Time Financial Intelligence
 
- FinSight is a full-stack web application developed for the HackOverflow Hackathon (IIT Goa) with a clear goal:
+ CampusFlow is a full-stack web application developed for the HackOverflow Hackathon (IIT Goa) with a clear goal:
  to help users understand, control, and improve their financial habits using simple, accurate, and realistic insights.
 
- Unlike basic expense trackers that only store numbers, FinSight focuses on financial clarity — showing where money goes, how much is saved or lost, and whether spending behavior is healthy.
+ Unlike basic expense trackers that only store numbers, CampusFlow focuses on financial clarity — showing where money goes, how much is saved or lost, and whether spending behavior is healthy.
 
-##  What FinSight Does
-### FinSight enables users to:
+##  What CampusFlow Does
+### CampusFlow enables users to:
 
  - Add expenses for any date (past or present)
 
@@ -129,7 +129,7 @@ The score is based on actual financial logic, not random values.
 - Mongoose
 
 ## 📁 Project Structure
--     SmartExpenseTracker/
+    -   CampusFlow/
       │
       ├── client/
       │   ├── index.html
@@ -191,7 +191,7 @@ in any modern browser.
    - ### KOLUKULURI SATYA NAGENDRA
 
 ## ✅ Final Note
-FinSight is not just an expense tracker —
+CampusFlow is not just an expense tracker —
 it is a decision-support tool that helps users clearly see:
 
  - How they spend
