@@ -129,7 +129,7 @@ The score is based on actual financial logic, not random values.
 - Mongoose
 
 ## 📁 Project Structure
-    -   CampusFlow/
+      CampusFlow/
       │
       ├── client/
       │   ├── index.html
