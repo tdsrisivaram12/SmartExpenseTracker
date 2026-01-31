@@ -56,38 +56,20 @@ This maps to:
 - Budget-aware event management workflows
 
 ---
-##  What CampusFlow Does
-- Prevents unrealistic 0 or 100 values
 
-- Updates dynamically when Budget or expenses change
+## 🧠 Expense Intelligence Score
+
+- Prevents unrealistic extreme values by bounding the score within a safe range
+- Updates dynamically when budget or expenses change
 
 ### Interpretation:
 - Low spending → higher score
-
 - High spending → lower score
+- Spending beyond allocated budget → critical warning displayed
 
-- Spending above income → critical warning shown
+This makes the score **believable, stable, and judge-acceptable**.
 
-- This makes the score believable, stable, and judge-acceptable.
-
-##  Technologies Used
-### Frontend
-- HTML
-
-- CSS
-
-- JavaScript
-
-- Chart.js
-
-### Backend
-- Node.js
-
-- Express.js
-
-- MongoDB
-
-- Mongoose
+---
 
 ## 📊 Analytics & Insights Dashboard
 
@@ -106,28 +88,49 @@ These insights enable administrators and organizers to:
 
 ---
 
+## 🧪 Technologies Used
+
+### Frontend
+- HTML
+- CSS
+- JavaScript
+- Chart.js
+
+### Backend
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+
+---
+
 ## 📁 Project Structure
-      CampusFlow
-      │
-      ├── client/
-      │   ├── index.html
-      │   ├── login.html
-      │   ├── register.html
-      │   ├── dashboard.html
-      │   ├── add-expense.html
-      │   ├── script.js
-      │   └── style.css
-      │
-      ├── server/
-      │   ├── server.js
-      │   ├── package.json
-      │   ├── package-lock.json
-      │   ├── routes/
-      │   │   └── expenseRoutes.js
-      │   └── models/
-      │       └── Expense.js
-      │
-      └── README.md
+
+    CampusFlow
+    │
+    ├── client/
+    │   ├── index.html
+    │   ├── login.html
+    │   ├── register.html
+    │   ├── dashboard.html
+    │   ├── add-expense.html
+    │   ├── script.js
+    │   └── style.css
+    │
+    ├── server/
+    │   ├── server.js
+    │   ├── package.json
+    │   ├── package-lock.json
+    │   ├── routes/
+    │   │   └── expenseRoutes.js   (core routes shown for demo clarity)
+    │   └── models/
+    │       └── Expense.js
+    │
+    └── README.md
+
+---
+
+
 ## How to Run the Project
 ### Backend
     - cd server
@@ -140,96 +143,106 @@ http://localhost:5000
         client/index.html
 in any modern browser.
 
-### Important Notes
- - node_modules is not uploaded (standard practice)
 
- - All dependencies install via npm install
+---
 
- - Authentication is simplified intentionally for demo clarity
+## ℹ️ Important Notes
 
- - Complete working flow is demonstrated in the video submission
-###  🧠 Hackathon Context
-  This project was developed for the HackOverflow Hackathon conducted by IIT Goa.
+- `node_modules` is not uploaded (standard practice)
+- All dependencies install via `npm install`
+- Authentication is simplified intentionally for demo clarity
+- Complete working flow is demonstrated in the video submission
 
-#### Primary Focus Areas
+---
+
+## 🧠 Hackathon Context
+
+This project was developed for the **HackOverflow Hackathon conducted by IIT Goa**.
+
+### Primary Focus Areas
 - Practical usefulness in real campus workflows
-
 - Clean and understandable implementation
-
 - Correct and realistic financial logic
-
 - Smooth, intuitive user experience
-
 - Honest scope with scalable system design
 
-## 👥 Team
-#### Project Design & Development:
-   - ### THOTA D SRI SIVA RAM
+---
 
-#### Video Presentation:
-   - ### KOLUKULURI SATYA NAGENDRA
+## 👥 Team
+
+### Project Design & Development
+**THOTA D SRI SIVA RAM**
+
+### Video Presentation
+**KOLUKULURI SATYA NAGENDRA**
+
+---
 
 ## ✅ Final Note
+
 CampusFlow is not just an expense tracker.
 
-It is a decision-support and analytics module that demonstrates how
-financial intelligence can be integrated into a unified campus event and resource management system.
+It is a **decision-support and analytics module** that demonstrates how
+financial intelligence can be integrated into a **unified campus event and resource management system**.
 
-## The project is built with accuracy, realism, scalability, and everyday usability in mind.
+The project is built with accuracy, realism, scalability, and everyday usability in mind.
 
-     │
-     ├── 🚀 Future Enhancements & Planned Extensions
-     │
-     ├── The following features are planned as future enhancements to further
-     │   evolve CampusFlow into a complete Unified Campus Resource & Event
-     │   Management System, as described in the HackOverflow problem statement.
-     │
-     │   ├── 🔐 Advanced Authentication & Authorization
-     │   │   ├── OTP-based verification during login and registration
-     │   │   ├── OAuth integration (Google / Institute SSO)
-     │   │   ├── Fine-grained role-based access control (Admin / Organizer / Participant)
-     │   │   └── Permission-based actions for approvals and resource access
-     │
-     │   ├── 👤 Extended User Profiles & Community Membership
-     │   │   ├── Detailed user profiles (department, year, role)
-     │   │   ├── Support for multiple club and committee memberships
-     │   │   ├── Club leadership and coordinator roles
-     │   │   └── Visibility controls for public and internal profile data
-     │
-     │   ├── 📅 Full Event Lifecycle Management
-     │   │   ├── Admin-based event approval and rejection flow
-     │   │   ├── Support for multi-day and collaborative events
-     │   │   ├── Joint events managed by multiple clubs or committees
-     │   │   └── Post-event auditing and financial reporting
-     │
-     │   ├── 🏫 Campus Resource Booking System
-     │   │   ├── Centralized management of rooms, halls, and labs
-     │   │   ├── Equipment booking (projectors, cameras, sound systems)
-     │   │   ├── Time-slot based reservations with conflict detection
-     │   │   ├── Approval-based or auto-approved bookings
-     │   │   └── Booking history and resource usage logs
-     │     
-     │   ├── 💬 In-App Communication
-     │   │   ├── One-to-one messaging between users
-     │   │   ├── Group chats for clubs, committees, and event teams
-     │   │   └── Event-specific communication channels
-     │
-     │   ├── 🔔 Notifications & Reminders
-     │   │   ├── Event approval and rejection notifications
-     │   │   ├── Upcoming event reminders
-     │   │   ├── Resource booking status alerts
-     │   │   └── Deadline and schedule notifications
-     │
-     │   ├── 📊 Advanced Analytics & Reporting
-     │   │   ├── Club-wise participation and engagement metrics
-     │   │   ├── Resource utilization statistics
-     │   │   ├── Event participation trends
-     │   │   ├── Exportable reports (CSV / Excel)
-     │   │   └── Long-term financial and activity insights for administrators
-     │
-     └── These enhancements demonstrate how CampusFlow is architected to scale
-         into a complete campus-wide platform while maintaining correctness,
-         modularity, and real-world usability.
+    │
+    ├── 🚀 Future Enhancements & Planned Extensions
+    │
+    ├── The following features are planned as future enhancements to further
+    │   evolve CampusFlow into a complete Unified Campus Resource & Event
+    │   Management System, as described in the HackOverflow problem statement.
+    │
+    │   ├── 🔐 Advanced Authentication & Authorization
+    │   │   ├── OTP-based verification during login and registration
+    │   │   ├── OAuth integration (Google / Institute SSO)
+    │   │   ├── Fine-grained role-based access control (Admin / Organizer / Participant)
+    │   │   └── Permission-based actions for approvals and resource access
+    │
+    │   ├── 👤 Extended User Profiles & Community Membership
+    │   │   ├── Detailed user profiles (department, year, role)
+    │   │   ├── Support for multiple club and committee memberships
+    │   │   ├── Club leadership and coordinator roles
+    │   │   └── Visibility controls for public and internal profile data
+    │
+    │   ├── 📅 Full Event Lifecycle Management
+    │   │   ├── Admin-based event approval and rejection flow
+    │   │   ├── Support for multi-day and collaborative events
+    │   │   ├── Joint events managed by multiple clubs or committees
+    │   │   └── Post-event auditing and financial reporting
+    │
+    │   ├── 🏫 Campus Resource Booking System
+    │   │   ├── Centralized management of rooms, halls, and labs
+    │   │   ├── Equipment booking (projectors, cameras, sound systems)
+    │   │   ├── Time-slot based reservations with conflict detection
+    │   │   ├── Approval-based or auto-approved bookings
+    │   │   └── Booking history and resource usage logs
+    │
+    │   ├── 💬 In-App Communication
+    │   │   ├── One-to-one messaging between users
+    │   │   ├── Group chats for clubs, committees, and event teams
+    │   │   └── Event-specific communication channels
+    │
+    │   ├── 🔔 Notifications & Reminders
+    │   │   ├── Event approval and rejection notifications
+    │   │   ├── Upcoming event reminders
+    │   │   ├── Resource booking status alerts
+    │   │   └── Deadline and schedule notifications
+    │
+    │   ├── 📊 Advanced Analytics & Reporting
+    │   │   ├── Club-wise participation and engagement metrics
+    │   │   ├── Resource utilization statistics
+    │   │   ├── Event participation trends
+    │   │   ├── Exportable reports (CSV / Excel)
+    │   │   └── Long-term financial and activity insights for administrators
+    │
+    └── These enhancements demonstrate how CampusFlow is architected to scale
+        into a complete campus-wide platform while maintaining correctness,
+        modularity, and real-world usability.
+
+
+
 
 
 
