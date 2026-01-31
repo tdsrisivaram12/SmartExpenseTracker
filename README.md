@@ -107,8 +107,8 @@ These insights enable administrators and organizers to:
 ---
 
 ## 📁 Project Structure
- 
--     │
+      CampusFlow
+      │
       ├── client/
       │   ├── index.html
       │   ├── login.html
