@@ -43,18 +43,18 @@ function logout() {
   location.href = "login.html";
 }
 
-/* ================= INCOME ================= */
+/* ================= BUDGET ================= */
 
-function saveIncome() {
+function saveBudget() {
   const userId = localStorage.getItem("userId");
-  const income = Number(incomeInput.value);
+  const budget = Number(budgetInput.value);
 
-  if (income <= 0) {
-    alert("Enter valid income");
+  if (budget <= 0) {
+    alert("Enter valid budget");
     return;
   }
 
-  localStorage.setItem("income_" + userId, income);
+  localStorage.setItem("budget_" + userId, budget);
   loadDashboard();
 }
 
@@ -135,26 +135,26 @@ async function loadDashboard() {
 
   monthTotal.innerText = total;
 
-  const income = Number(localStorage.getItem("income_" + userId)) || 0;
-  incomeInput.value = income;
+  const budget = Number(localStorage.getItem("budget_" + userId)) || 0;
+  budgetInput.value = budget;
 
-  const savings = income - total;
+  const savings = budget - total;
   monthSavings.innerText = savings;
 
   /* ===== EXACT INTELLIGENCE SCORE ===== */
 
-  if (!income) {
+  if (!budget) {
     score.innerText = "--";
-    scoreText.innerText = "Enter income to calculate score";
-    incomeInfo.innerText = "";
+    scoreText.innerText = "Enter budget to calculate score";
+    budgetInfo.innerText = "";
   } else {
-    const ratio = total / income;
+    const ratio = total / budget;
     const percent = ratio * 100;
     let finalScore;
 
     if (ratio > 1) {
       finalScore = 5;
-      scoreText.innerText = "Critical: expenses exceed income";
+      scoreText.innerText = "Critical: expenses exceed budget";
     } else {
       finalScore = Math.round(100 - percent);
 
@@ -173,10 +173,10 @@ async function loadDashboard() {
     if (finalScore < 5) finalScore = 5;
 
     score.innerText = finalScore;
-    incomeInfo.innerText = `You spent ${percent.toFixed(1)}% of your income`;
+    budgetInfo.innerText = `You spent ${percent.toFixed(1)}% of your budget.`;
   }
 
-  /* ===== FIXED & ORDERED CALENDAR ===== */
+  /* ===== CALENDAR ===== */
 
   calendar.innerHTML = "";
   dayExpenses.innerHTML = "";
@@ -228,10 +228,10 @@ async function loadDashboard() {
 
 function showSavings() {
   const userId = localStorage.getItem("userId");
-  const income = Number(localStorage.getItem("income_" + userId)) || 0;
+  const budget = Number(localStorage.getItem("budget_" + userId)) || 0;
 
-  if (!income) {
-    alert("Enter income first");
+  if (!budget) {
+    alert("Enter budget first");
     return;
   }
 
@@ -243,7 +243,7 @@ function showSavings() {
 
   for (let m = 0; m < 12; m++) {
     const spent = window.yearlyExpenses[`${year}-${m}`] || 0;
-    const saving = income - spent;
+    const saving = budget - spent;
     totalYear += saving;
 
     const li = document.createElement("li");
